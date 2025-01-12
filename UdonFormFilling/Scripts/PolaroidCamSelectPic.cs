@@ -26,6 +26,6 @@ public class PolaroidCamSelectPic : UdonSharpBehaviour
         ApplySelection();
     }
     private void ApplySelection(){
-        logText.text = "图片序号为" + selectedDropdownValue.ToString();
+        logText.text = selectionLogText + selectedDropdownValue.ToString();
     }
 }
