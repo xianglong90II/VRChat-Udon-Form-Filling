@@ -9,10 +9,11 @@ public class PolaroidCamSelectPic : UdonSharpBehaviour
 {
     public TMP_Dropdown formPicsDropDown;
     public TMP_Text logText;
+    public string selectionLogText = "Picture Index Is: ";
     [UdonSynced]public int selectedDropdownValue = 0;
     void Start()
     {
-        logText.text = "图片序号为" + selectedDropdownValue.ToString();
+        logText.text = selectionLogText + selectedDropdownValue.ToString();
     }
     public void NetApplySelection(){
         Networking.SetOwner(Networking.LocalPlayer,this.gameObject);

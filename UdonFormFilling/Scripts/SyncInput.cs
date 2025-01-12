@@ -7,16 +7,18 @@ using VRC.Udon;
 
 public class SyncInput : UdonSharpBehaviour
 {
-    public TMP_InputField targetInputField;
+    private TMP_InputField targetInputField;
+    [UdonSynced,SerializeField]private string _syncingText = "";
+    void Start(){
+        targetInputField = (TMP_InputField)this.gameObject.GetComponent(typeof(TMP_InputField));
+    }
     public void OnTriggered(){
         Networking.SetOwner(Networking.LocalPlayer,this.gameObject);
+        //set localtext to syncing text
+        _syncingText = targetInputField.text;
         RequestSerialization();
-        SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All,nameof(syncText));
-    }
-    public void syncText(){
-        targetInputField.text = targetInputField.text;
     }
     public override void OnDeserialization(){
-        syncText();
+        targetInputField.text = _syncingText;
     }
 }

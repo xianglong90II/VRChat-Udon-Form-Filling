@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientIntensity: 1.63
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: c8426fba76717a74eaf8a9bc22c779a2,
+    type: 2}
   m_LightingSettings: {fileID: 372109120}
 --- !u!196 &4
 NavMeshSettings:
@@ -421,9 +422,9 @@ LightingSettings:
   m_AlbedoBoost: 1
   m_IndirectOutputScale: 1
   m_UsingShadowmask: 1
-  m_BakeBackend: 1
+  m_BakeBackend: 2
   m_LightmapMaxSize: 1024
-  m_BakeResolution: 40
+  m_BakeResolution: 20
   m_Padding: 2
   m_LightmapCompression: 3
   m_AO: 0
@@ -443,7 +444,7 @@ LightingSettings:
   m_FinalGather: 0
   m_FinalGatherRayCount: 256
   m_FinalGatherFiltering: 1
-  m_PVRCulling: 1
+  m_PVRCulling: 0
   m_PVRSampling: 1
   m_PVRDirectSampleCount: 32
   m_PVRSampleCount: 512
@@ -452,7 +453,7 @@ LightingSettings:
   m_LightProbeSampleCountMultiplier: 4
   m_PVRBounces: 2
   m_PVRMinBounces: 2
-  m_PVREnvironmentImportanceSampling: 1
+  m_PVREnvironmentImportanceSampling: 0
   m_PVRFilteringMode: 1
   m_PVRDenoiserTypeDirect: 1
   m_PVRDenoiserTypeIndirect: 1
@@ -576,7 +577,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &487843778
 Transform:
@@ -682,6 +683,71 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5368387862398429609}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &496585638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 496585640}
+  - component: {fileID: 496585639}
+  m_Layer: 0
+  m_Name: Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &496585639
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496585638}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 0
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 32
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 100, y: 100, z: 100}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &496585640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496585638}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.9160333, y: 2.1198316, z: -3.5929887}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &506891211 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1424500398929332586, guid: db410fce55cc9b246868e7dee8e01ddf,
@@ -747,7 +813,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &590905012
 Transform:
@@ -876,7 +942,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &652523638
 BoxCollider:
@@ -1029,7 +1095,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &712246863
 Transform:
@@ -1164,7 +1230,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &776454148
 MeshCollider:
@@ -1767,7 +1833,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -2256,26 +2322,26 @@ MonoBehaviour:
   useAssignedLayers: 0
   DynamicPrefabs: []
   DynamicMaterials:
-  - {fileID: 2100000, guid: 86298acb912d8b34d9cbe01c94cf9853, type: 2}
   - {fileID: 2100000, guid: eeb5fb1cf6dd5db4584ed4019c085350, type: 2}
-  - {fileID: 2100000, guid: 9bb361ba3ea540d4cb0bb90c6f543c2f, type: 2}
+  - {fileID: 2100000, guid: 392af9adc65139e4699f8fc5248f8cbb, type: 2}
   - {fileID: 2100000, guid: cd0b152cd1dfad54293b101962ca7d7b, type: 2}
-  - {fileID: 2100000, guid: baac11805cffec04a8cdb831341ad7e5, type: 2}
+  - {fileID: 2100000, guid: 30321ceac72a1eb4d9e0956bff7503ff, type: 2}
   - {fileID: 2100000, guid: 8b7cef7e605e84949b3a07a9431ba577, type: 2}
   - {fileID: 2100000, guid: 28985e8645c9897419236d9b020db3ec, type: 2}
   - {fileID: 2100000, guid: 461f9c324a5d49646ade009f58ed7879, type: 2}
   - {fileID: 2100000, guid: 0cb45d5176d0ffc4ebfab1bd4ff42373, type: 2}
   - {fileID: 2100000, guid: e7e975bff5b9401489c505528a059f89, type: 2}
+  - {fileID: 2100000, guid: baac11805cffec04a8cdb831341ad7e5, type: 2}
+  - {fileID: 2100000, guid: 86298acb912d8b34d9cbe01c94cf9853, type: 2}
+  - {fileID: 2100000, guid: 3a1d454bd350f2f4cb5acae5f389cf11, type: 2}
+  - {fileID: 2100000, guid: 5da54353883eb3540a7bbbe5c80cbd9f, type: 2}
+  - {fileID: 2100000, guid: a5cbbb92d49df7e408a971129e92474d, type: 2}
   - {fileID: 2100000, guid: c99cdce2d603b524195112388534a401, type: 2}
   - {fileID: 2100000, guid: 24a83d8e8503b0d46b7ad581777d2d3a, type: 2}
-  - {fileID: 2100000, guid: 392af9adc65139e4699f8fc5248f8cbb, type: 2}
-  - {fileID: 2100000, guid: 3a1d454bd350f2f4cb5acae5f389cf11, type: 2}
+  - {fileID: 2100000, guid: 0d653c2eda71f9d4d97a36f96d9914b3, type: 2}
+  - {fileID: 2100000, guid: 9bb361ba3ea540d4cb0bb90c6f543c2f, type: 2}
   - {fileID: 2100000, guid: d3fd57ad695124946aff606e3d3dcb1d, type: 2}
   - {fileID: 2100000, guid: 51be20006c0f98e459f516cb5c924467, type: 2}
-  - {fileID: 2100000, guid: a5cbbb92d49df7e408a971129e92474d, type: 2}
-  - {fileID: 2100000, guid: 30321ceac72a1eb4d9e0956bff7503ff, type: 2}
-  - {fileID: 2100000, guid: 0d653c2eda71f9d4d97a36f96d9914b3, type: 2}
-  - {fileID: 2100000, guid: 5da54353883eb3540a7bbbe5c80cbd9f, type: 2}
   LightMapsNear: []
   LightMapsFar: []
   LightMode: 0
@@ -4770,7 +4836,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1452024543
 Transform:
@@ -4955,7 +5021,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1464761027
 Transform:
@@ -5183,7 +5249,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1619116947
 Transform:
@@ -10881,6 +10947,7 @@ SceneRoots:
   - {fileID: 1263459494}
   - {fileID: 799207965}
   - {fileID: 1458930705}
+  - {fileID: 496585640}
   - {fileID: 1619116947}
   - {fileID: 5368387862398429609}
   - {fileID: 2572252832597880282}

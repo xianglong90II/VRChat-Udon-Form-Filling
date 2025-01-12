@@ -12246,6 +12246,7 @@ MonoBehaviour:
   _udonSharpBackingUdonBehaviour: {fileID: 3755372539618518106}
   formPicsDropDown: {fileID: 4762047801182624818}
   logText: {fileID: 407769922195387844}
+  selectionLogText: 'Picture Index Is: '
   selectedDropdownValue: 0
 --- !u!114 &3755372539618518106
 MonoBehaviour:
@@ -12453,6 +12454,7 @@ MonoBehaviour:
   - {fileID: 1881416810845525161}
   - {fileID: 1618668705393091268}
   selectionLog: {fileID: 8120217513912235348}
+  selectionLogText: 'Selected Form Index: '
   selectedFormIndex: 0
 --- !u!114 &2797417383413700954
 MonoBehaviour:
