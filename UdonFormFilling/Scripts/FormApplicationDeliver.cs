@@ -22,6 +22,14 @@ public class FormApplicationDeliver : UdonSharpBehaviour
     {
         InitAnswersTMP();
     }
+    public void ResetEntry(){
+        foreach(TMP_InputField textAnswer in TextAnswers){
+            textAnswer.text = "";
+        }
+        foreach(VRCUrlInputField picAnswer in PicAnswers){
+            picAnswer.SetUrl(VRCUrl.Empty);
+        }
+    }
     private void InitAnswersTMP(){
         GameObject[] TextQAs = (GameObject[])formSelectionManagerBehaviour.GetProgramVariable("TextQAs");
         GameObject[] PicQAs = (GameObject[])formSelectionManagerBehaviour.GetProgramVariable("PicQAs");
@@ -62,6 +70,8 @@ public class FormApplicationDeliver : UdonSharpBehaviour
         //Get target texts and pics form target form
         TMP_Text[] targetTexts = (TMP_Text[])targetFormBehaviour.GetProgramVariable("FormTexts");
         GameObject[] targetPics = (GameObject[])targetFormBehaviour.GetProgramVariable("FormPics");
+        //Get changeTogether objects from target form
+        ChangeTogetherWith[] changeTogetherWiths = (ChangeTogetherWith[])targetFormBehaviour.GetProgramVariable("FormChangeTogetherObjets");
 
         //Apply the text and pics
         //texts
@@ -91,7 +101,9 @@ public class FormApplicationDeliver : UdonSharpBehaviour
             }
             // targetPics[i].GetComponent<Renderer>().material.SetTexture();
         }
-        
+        for (int i = 0; i<changeTogetherWiths.Length;i++){
+            changeTogetherWiths[i].SendCustomEvent("SyncContent");
+        }
     }
 
     // The Button Trigger is here

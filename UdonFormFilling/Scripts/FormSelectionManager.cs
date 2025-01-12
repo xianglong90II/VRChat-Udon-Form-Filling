@@ -11,8 +11,6 @@ public class FormSelectionManager : UdonSharpBehaviour
     public GameObject[] TextQAs;
     public GameObject[] PicQAs;
 
-    // public Renderer FormPreview;
-
     private GameObject[] forms; 
     private UdonBehaviour[] formsBehaviour;
     private TMP_Text[] TextQuestions;
@@ -104,14 +102,5 @@ public class FormSelectionManager : UdonSharpBehaviour
         ResetQAs();
         SetQAs();
     }
-
-    // //for other Scripts
-    // public void ChangePreview(){
-    //     Texture2D previewTex = (Texture2D)formsBehaviour[selectedFormIndex].GetProgramVariable("PreviewImage");
-    //     Debug.Log(previewTex);
-    //     // if (previewTex!=null){
-    //     //     FormPreview.material.mainTexture = previewTex;
-    //     // }
-    // }
 
 }

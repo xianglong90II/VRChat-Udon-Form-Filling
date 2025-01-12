@@ -14,6 +14,7 @@ public class FormData : UdonSharpBehaviour
     public GameObject FormObject;
     public TMP_Text[] FormTexts;
     public GameObject[] FormPics;
+    public ChangeTogetherWith[] FormChangeTogetherObjets;
 
     void Start()
     {
